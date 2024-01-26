@@ -1,0 +1,81 @@
+* { box-sizing: border-box; }
+
+body {
+    background-color: #4a4e69;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#start_btn {
+    position: relative;
+    top: -60px;
+    left: 430px;
+    border: none;
+    background-color: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 22px;
+    background-color: #22223b;
+    color: #fff;
+    transition: 0.3s;
+}
+#start_btn:hover {
+    background-color: #4a4e69;
+}
+
+h1, #score {
+    color: #fff;
+    text-align: center;
+}
+
+#game {
+    width: 1000px;
+    height: 560px;
+    border: 4px solid #22223b;
+    border-radius: 36px;
+    margin: auto;
+    background-image: url("images/game.jpg");
+    background-size: cover;
+}
+
+#dino {
+    width: 100px;
+    height: 108px;
+    position: relative;
+    top: 400px;
+    left: 30px;
+    background-image: url("images/dino.png");
+    background-size: cover;
+}
+
+#rock {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 320px;
+    left: 920px;
+    background-image: url("images/rock.png");
+    background-size: cover;    
+}
+
+.jump {
+    animation: jump 0.5s;
+}
+
+@keyframes jump {
+    0% {top: 400px;}
+    50% {top: 200px;}
+    75% {top: 200px;}
+    100% {top: 400px;}
+}
+
+.rock {
+    animation: rock 1s infinite;
+    /*animation-timing-function: linear;*/
+}
+
+@keyframes rock {
+    0% {left: 920px;}
+    100% {left: -50px;}
+}
+
